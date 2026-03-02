@@ -19,7 +19,7 @@ public class ReciboModel {
 	
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "adm_recibo_id")
 	private Long idReciboAdm;
 

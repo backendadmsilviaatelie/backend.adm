@@ -25,9 +25,8 @@ public interface ReciboRepository extends JpaRepository <ReciboModel, Long> {
 		return Optional.empty();
 	}
 	
-	@Query("SELECT r FROM ReciboModel r WHERE r.dataPagamento >= :inicio AND r.dataPagamento <= :fim")
-	List<ReciboModel> buscarPorPeriodo(@Param("inicio") LocalDate inicio,
-	                                    @Param("fim") LocalDate fim);
+	@Query("SELECT r FROM ReciboModel r WHERE r.dataPagReciboAdm >= :inicio AND r.dataPagReciboAdm <= :fim")
+	List<ReciboModel> buscarPorPeriodo(LocalDate inicio, LocalDate fim);
 	
 }
 
